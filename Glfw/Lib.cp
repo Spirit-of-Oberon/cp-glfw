@@ -31,129 +31,129 @@ CONST
     (**
      * GLFW version
      *)
-    GLFW_VERSION_MAJOR*    = 2;
-    GLFW_VERSION_MINOR*    = 7;
-    GLFW_VERSION_REVISION* = 8;
+    VERSION_MAJOR*    = 2;
+    VERSION_MINOR*    = 7;
+    VERSION_REVISION* = 8;
 
     (**
      * Input handling definitions
      *)
 
     (* Key and button state/action definitions *)
-    GLFW_RELEASE*          = 0;
-    GLFW_PRESS*            = 1;
+    RELEASE*          = 0;
+    PRESS*            = 1;
 
     (* Keyboard key definitions: 8-bit ISO-8859-1 (Latin 1) encoding is used *)
     (* for printable keys (such as A-Z, 0-9 etc), and values above 256       *)
     (* represent special (non-printable) keys (e.g. F1, Page Up etc).        *)
-    GLFW_KEY_UNKNOWN*      = -1;
-    GLFW_KEY_SPACE*        = 32;
-    GLFW_KEY_SPECIAL*      = 256;
-    GLFW_KEY_ESC*          = (GLFW_KEY_SPECIAL+1);
-    GLFW_KEY_F1*           = (GLFW_KEY_SPECIAL+2);
-    GLFW_KEY_F2*           = (GLFW_KEY_SPECIAL+3);
-    GLFW_KEY_F3*           = (GLFW_KEY_SPECIAL+4);
-    GLFW_KEY_F4*           = (GLFW_KEY_SPECIAL+5);
-    GLFW_KEY_F5*           = (GLFW_KEY_SPECIAL+6);
-    GLFW_KEY_F6*           = (GLFW_KEY_SPECIAL+7);
-    GLFW_KEY_F7*           = (GLFW_KEY_SPECIAL+8);
-    GLFW_KEY_F8*           = (GLFW_KEY_SPECIAL+9);
-    GLFW_KEY_F9*           = (GLFW_KEY_SPECIAL+10);
-    GLFW_KEY_F10*          = (GLFW_KEY_SPECIAL+11);
-    GLFW_KEY_F11*          = (GLFW_KEY_SPECIAL+12);
-    GLFW_KEY_F12*          = (GLFW_KEY_SPECIAL+13);
-    GLFW_KEY_F13*          = (GLFW_KEY_SPECIAL+14);
-    GLFW_KEY_F14*          = (GLFW_KEY_SPECIAL+15);
-    GLFW_KEY_F15*          = (GLFW_KEY_SPECIAL+16);
-    GLFW_KEY_F16*          = (GLFW_KEY_SPECIAL+17);
-    GLFW_KEY_F17*          = (GLFW_KEY_SPECIAL+18);
-    GLFW_KEY_F18*          = (GLFW_KEY_SPECIAL+19);
-    GLFW_KEY_F19*          = (GLFW_KEY_SPECIAL+20);
-    GLFW_KEY_F20*          = (GLFW_KEY_SPECIAL+21);
-    GLFW_KEY_F21*          = (GLFW_KEY_SPECIAL+22);
-    GLFW_KEY_F22*          = (GLFW_KEY_SPECIAL+23);
-    GLFW_KEY_F23*          = (GLFW_KEY_SPECIAL+24);
-    GLFW_KEY_F24*          = (GLFW_KEY_SPECIAL+25);
-    GLFW_KEY_F25*          = (GLFW_KEY_SPECIAL+26);
-    GLFW_KEY_UP*           = (GLFW_KEY_SPECIAL+27);
-    GLFW_KEY_DOWN*         = (GLFW_KEY_SPECIAL+28);
-    GLFW_KEY_LEFT*         = (GLFW_KEY_SPECIAL+29);
-    GLFW_KEY_RIGHT*        = (GLFW_KEY_SPECIAL+30);
-    GLFW_KEY_LSHIFT*       = (GLFW_KEY_SPECIAL+31);
-    GLFW_KEY_RSHIFT*       = (GLFW_KEY_SPECIAL+32);
-    GLFW_KEY_LCTRL*        = (GLFW_KEY_SPECIAL+33);
-    GLFW_KEY_RCTRL*        = (GLFW_KEY_SPECIAL+34);
-    GLFW_KEY_LALT*         = (GLFW_KEY_SPECIAL+35);
-    GLFW_KEY_RALT*         = (GLFW_KEY_SPECIAL+36);
-    GLFW_KEY_TAB*          = (GLFW_KEY_SPECIAL+37);
-    GLFW_KEY_ENTER*        = (GLFW_KEY_SPECIAL+38);
-    GLFW_KEY_BACKSPACE*    = (GLFW_KEY_SPECIAL+39);
-    GLFW_KEY_INSERT*       = (GLFW_KEY_SPECIAL+40);
-    GLFW_KEY_DEL*          = (GLFW_KEY_SPECIAL+41);
-    GLFW_KEY_PAGEUP*       = (GLFW_KEY_SPECIAL+42);
-    GLFW_KEY_PAGEDOWN*     = (GLFW_KEY_SPECIAL+43);
-    GLFW_KEY_HOME*         = (GLFW_KEY_SPECIAL+44);
-    GLFW_KEY_END*          = (GLFW_KEY_SPECIAL+45);
-    GLFW_KEY_KP_0*         = (GLFW_KEY_SPECIAL+46);
-    GLFW_KEY_KP_1*         = (GLFW_KEY_SPECIAL+47);
-    GLFW_KEY_KP_2*         = (GLFW_KEY_SPECIAL+48);
-    GLFW_KEY_KP_3*         = (GLFW_KEY_SPECIAL+49);
-    GLFW_KEY_KP_4*         = (GLFW_KEY_SPECIAL+50);
-    GLFW_KEY_KP_5*         = (GLFW_KEY_SPECIAL+51);
-    GLFW_KEY_KP_6*         = (GLFW_KEY_SPECIAL+52);
-    GLFW_KEY_KP_7*         = (GLFW_KEY_SPECIAL+53);
-    GLFW_KEY_KP_8*         = (GLFW_KEY_SPECIAL+54);
-    GLFW_KEY_KP_9*         = (GLFW_KEY_SPECIAL+55);
-    GLFW_KEY_KP_DIVIDE*    = (GLFW_KEY_SPECIAL+56);
-    GLFW_KEY_KP_MULTIPLY*  = (GLFW_KEY_SPECIAL+57);
-    GLFW_KEY_KP_SUBTRACT*  = (GLFW_KEY_SPECIAL+58);
-    GLFW_KEY_KP_ADD*       = (GLFW_KEY_SPECIAL+59);
-    GLFW_KEY_KP_DECIMAL*   = (GLFW_KEY_SPECIAL+60);
-    GLFW_KEY_KP_EQUAL*     = (GLFW_KEY_SPECIAL+61);
-    GLFW_KEY_KP_ENTER*     = (GLFW_KEY_SPECIAL+62);
-    GLFW_KEY_KP_NUM_LOCK*  = (GLFW_KEY_SPECIAL+63);
-    GLFW_KEY_CAPS_LOCK*    = (GLFW_KEY_SPECIAL+64);
-    GLFW_KEY_SCROLL_LOCK*  = (GLFW_KEY_SPECIAL+65);  
-    GLFW_KEY_PAUSE*        = (GLFW_KEY_SPECIAL+66);
-    GLFW_KEY_LSUPER*       = (GLFW_KEY_SPECIAL+67);
-    GLFW_KEY_RSUPER*       = (GLFW_KEY_SPECIAL+68);
-    GLFW_KEY_MENU*         = (GLFW_KEY_SPECIAL+69);
-    GLFW_KEY_LAST*         = GLFW_KEY_MENU;
+    KEY_UNKNOWN*      = -1;
+    KEY_SPACE*        = 32;
+    KEY_SPECIAL*      = 256;
+    KEY_ESC*          = (KEY_SPECIAL+1);
+    KEY_F1*           = (KEY_SPECIAL+2);
+    KEY_F2*           = (KEY_SPECIAL+3);
+    KEY_F3*           = (KEY_SPECIAL+4);
+    KEY_F4*           = (KEY_SPECIAL+5);
+    KEY_F5*           = (KEY_SPECIAL+6);
+    KEY_F6*           = (KEY_SPECIAL+7);
+    KEY_F7*           = (KEY_SPECIAL+8);
+    KEY_F8*           = (KEY_SPECIAL+9);
+    KEY_F9*           = (KEY_SPECIAL+10);
+    KEY_F10*          = (KEY_SPECIAL+11);
+    KEY_F11*          = (KEY_SPECIAL+12);
+    KEY_F12*          = (KEY_SPECIAL+13);
+    KEY_F13*          = (KEY_SPECIAL+14);
+    KEY_F14*          = (KEY_SPECIAL+15);
+    KEY_F15*          = (KEY_SPECIAL+16);
+    KEY_F16*          = (KEY_SPECIAL+17);
+    KEY_F17*          = (KEY_SPECIAL+18);
+    KEY_F18*          = (KEY_SPECIAL+19);
+    KEY_F19*          = (KEY_SPECIAL+20);
+    KEY_F20*          = (KEY_SPECIAL+21);
+    KEY_F21*          = (KEY_SPECIAL+22);
+    KEY_F22*          = (KEY_SPECIAL+23);
+    KEY_F23*          = (KEY_SPECIAL+24);
+    KEY_F24*          = (KEY_SPECIAL+25);
+    KEY_F25*          = (KEY_SPECIAL+26);
+    KEY_UP*           = (KEY_SPECIAL+27);
+    KEY_DOWN*         = (KEY_SPECIAL+28);
+    KEY_LEFT*         = (KEY_SPECIAL+29);
+    KEY_RIGHT*        = (KEY_SPECIAL+30);
+    KEY_LSHIFT*       = (KEY_SPECIAL+31);
+    KEY_RSHIFT*       = (KEY_SPECIAL+32);
+    KEY_LCTRL*        = (KEY_SPECIAL+33);
+    KEY_RCTRL*        = (KEY_SPECIAL+34);
+    KEY_LALT*         = (KEY_SPECIAL+35);
+    KEY_RALT*         = (KEY_SPECIAL+36);
+    KEY_TAB*          = (KEY_SPECIAL+37);
+    KEY_ENTER*        = (KEY_SPECIAL+38);
+    KEY_BACKSPACE*    = (KEY_SPECIAL+39);
+    KEY_INSERT*       = (KEY_SPECIAL+40);
+    KEY_DEL*          = (KEY_SPECIAL+41);
+    KEY_PAGEUP*       = (KEY_SPECIAL+42);
+    KEY_PAGEDOWN*     = (KEY_SPECIAL+43);
+    KEY_HOME*         = (KEY_SPECIAL+44);
+    KEY_END*          = (KEY_SPECIAL+45);
+    KEY_KP_0*         = (KEY_SPECIAL+46);
+    KEY_KP_1*         = (KEY_SPECIAL+47);
+    KEY_KP_2*         = (KEY_SPECIAL+48);
+    KEY_KP_3*         = (KEY_SPECIAL+49);
+    KEY_KP_4*         = (KEY_SPECIAL+50);
+    KEY_KP_5*         = (KEY_SPECIAL+51);
+    KEY_KP_6*         = (KEY_SPECIAL+52);
+    KEY_KP_7*         = (KEY_SPECIAL+53);
+    KEY_KP_8*         = (KEY_SPECIAL+54);
+    KEY_KP_9*         = (KEY_SPECIAL+55);
+    KEY_KP_DIVIDE*    = (KEY_SPECIAL+56);
+    KEY_KP_MULTIPLY*  = (KEY_SPECIAL+57);
+    KEY_KP_SUBTRACT*  = (KEY_SPECIAL+58);
+    KEY_KP_ADD*       = (KEY_SPECIAL+59);
+    KEY_KP_DECIMAL*   = (KEY_SPECIAL+60);
+    KEY_KP_EQUAL*     = (KEY_SPECIAL+61);
+    KEY_KP_ENTER*     = (KEY_SPECIAL+62);
+    KEY_KP_NUM_LOCK*  = (KEY_SPECIAL+63);
+    KEY_CAPS_LOCK*    = (KEY_SPECIAL+64);
+    KEY_SCROLL_LOCK*  = (KEY_SPECIAL+65);  
+    KEY_PAUSE*        = (KEY_SPECIAL+66);
+    KEY_LSUPER*       = (KEY_SPECIAL+67);
+    KEY_RSUPER*       = (KEY_SPECIAL+68);
+    KEY_MENU*         = (KEY_SPECIAL+69);
+    KEY_LAST*         = KEY_MENU;
 
     (* Mouse button definitions *)
-    GLFW_MOUSE_BUTTON_1*      = 0;
-    GLFW_MOUSE_BUTTON_2*      = 1;
-    GLFW_MOUSE_BUTTON_3*      = 2;
-    GLFW_MOUSE_BUTTON_4*      = 3;
-    GLFW_MOUSE_BUTTON_5*      = 4;
-    GLFW_MOUSE_BUTTON_6*      = 5;
-    GLFW_MOUSE_BUTTON_7*      = 6;
-    GLFW_MOUSE_BUTTON_8*      = 7;
-    GLFW_MOUSE_BUTTON_LAST*   = GLFW_MOUSE_BUTTON_8;
+    MOUSE_BUTTON_1*      = 0;
+    MOUSE_BUTTON_2*      = 1;
+    MOUSE_BUTTON_3*      = 2;
+    MOUSE_BUTTON_4*      = 3;
+    MOUSE_BUTTON_5*      = 4;
+    MOUSE_BUTTON_6*      = 5;
+    MOUSE_BUTTON_7*      = 6;
+    MOUSE_BUTTON_8*      = 7;
+    MOUSE_BUTTON_LAST*   = MOUSE_BUTTON_8;
 
     (* Mouse button aliases *)
-    GLFW_MOUSE_BUTTON_LEFT*   = GLFW_MOUSE_BUTTON_1;
-    GLFW_MOUSE_BUTTON_RIGHT*  = GLFW_MOUSE_BUTTON_2;
-    GLFW_MOUSE_BUTTON_MIDDLE* = GLFW_MOUSE_BUTTON_3;
+    MOUSE_BUTTON_LEFT*   = MOUSE_BUTTON_1;
+    MOUSE_BUTTON_RIGHT*  = MOUSE_BUTTON_2;
+    MOUSE_BUTTON_MIDDLE* = MOUSE_BUTTON_3;
 
     (* Joystick identifiers *)
-    GLFW_JOYSTICK_1*           = 0;
-    GLFW_JOYSTICK_2*           = 1;
-    GLFW_JOYSTICK_3*           = 2;
-    GLFW_JOYSTICK_4*           = 3;
-    GLFW_JOYSTICK_5*           = 4;
-    GLFW_JOYSTICK_6*           = 5;
-    GLFW_JOYSTICK_7*           = 6;
-    GLFW_JOYSTICK_8*           = 7;
-    GLFW_JOYSTICK_9*           = 8;
-    GLFW_JOYSTICK_10*          = 9;
-    GLFW_JOYSTICK_11*          = 10;
-    GLFW_JOYSTICK_12*          = 11;
-    GLFW_JOYSTICK_13*          = 12;
-    GLFW_JOYSTICK_14*          = 13;
-    GLFW_JOYSTICK_15*          = 14;
-    GLFW_JOYSTICK_16*          = 15;
-    GLFW_JOYSTICK_LAST*        = GLFW_JOYSTICK_16;
+    JOYSTICK_1*           = 0;
+    JOYSTICK_2*           = 1;
+    JOYSTICK_3*           = 2;
+    JOYSTICK_4*           = 3;
+    JOYSTICK_5*           = 4;
+    JOYSTICK_6*           = 5;
+    JOYSTICK_7*           = 6;
+    JOYSTICK_8*           = 7;
+    JOYSTICK_9*           = 8;
+    JOYSTICK_10*          = 9;
+    JOYSTICK_11*          = 10;
+    JOYSTICK_12*          = 11;
+    JOYSTICK_13*          = 12;
+    JOYSTICK_14*          = 13;
+    JOYSTICK_15*          = 14;
+    JOYSTICK_16*          = 15;
+    JOYSTICK_LAST*        = JOYSTICK_16;
 
 
     (*
@@ -161,179 +161,179 @@ CONST
      *)
 
     (* glfwOpenWindow modes *)
-    GLFW_WINDOW*               = 000010001H;
-    GLFW_FULLSCREEN*           = 000010002H;
+    WINDOW*               = 000010001H;
+    FULLSCREEN*           = 000010002H;
 
     (* glfwGetWindowParam tokens *)
-    GLFW_OPENED*               = 000020001H;
-    GLFW_ACTIVE*               = 000020002H;
-    GLFW_ICONIFIED*            = 000020003H;
-    GLFW_ACCELERATED*          = 000020004H;
-    GLFW_RED_BITS*             = 000020005H;
-    GLFW_GREEN_BITS*           = 000020006H;
-    GLFW_BLUE_BITS*            = 000020007H;
-    GLFW_ALPHA_BITS*           = 000020008H;
-    GLFW_DEPTH_BITS*           = 000020009H;
-    GLFW_STENCIL_BITS*         = 00002000AH;
+    OPENED*               = 000020001H;
+    ACTIVE*               = 000020002H;
+    ICONIFIED*            = 000020003H;
+    ACCELERATED*          = 000020004H;
+    RED_BITS*             = 000020005H;
+    GREEN_BITS*           = 000020006H;
+    BLUE_BITS*            = 000020007H;
+    ALPHA_BITS*           = 000020008H;
+    DEPTH_BITS*           = 000020009H;
+    STENCIL_BITS*         = 00002000AH;
 
     (* The following constants are used for both glfwGetWindowParam *)
     (* and glfwOpenWindowHint *)
-    GLFW_REFRESH_RATE*         = 00002000BH;
-    GLFW_ACCUM_RED_BITS*       = 00002000CH;
-    GLFW_ACCUM_GREEN_BITS*     = 00002000DH;
-    GLFW_ACCUM_BLUE_BITS*      = 00002000EH;
-    GLFW_ACCUM_ALPHA_BITS*     = 00002000FH;
-    GLFW_AUX_BUFFERS*          = 000020010H;
-    GLFW_STEREO*               = 000020011H;
-    GLFW_WINDOW_NO_RESIZE*     = 000020012H;
-    GLFW_FSAA_SAMPLES*         = 000020013H;
-    GLFW_OPENGL_VERSION_MAJOR* = 000020014H;
-    GLFW_OPENGL_VERSION_MINOR* = 000020015H;
-    GLFW_OPENGL_FORWARD_COMPAT*= 000020016H;
-    GLFW_DEBUG_CONTEXT*        = 000020017H;
-    GLFW_OPENGL_PROFILE*       = 000020018H;
+    REFRESH_RATE*         = 00002000BH;
+    ACCUM_RED_BITS*       = 00002000CH;
+    ACCUM_GREEN_BITS*     = 00002000DH;
+    ACCUM_BLUE_BITS*      = 00002000EH;
+    ACCUM_ALPHA_BITS*     = 00002000FH;
+    AUX_BUFFERS*          = 000020010H;
+    STEREO*               = 000020011H;
+    WINDOW_NO_RESIZE*     = 000020012H;
+    FSAA_SAMPLES*         = 000020013H;
+    OPENGL_VERSION_MAJOR* = 000020014H;
+    OPENGL_VERSION_MINOR* = 000020015H;
+    OPENGL_FORWARD_COMPAT*= 000020016H;
+    DEBUG_CONTEXT*        = 000020017H;
+    OPENGL_PROFILE*       = 000020018H;
 
-    (* GLFW_OPENGL_PROFILE tokens *)
-    GLFW_OPENGL_CORE_PROFILE*   = 000050001H;
-    GLFW_OPENGL_COMPAT_PROFILE* = 000050002H;
+    (* OPENGL_PROFILE tokens *)
+    OPENGL_CORE_PROFILE*   = 000050001H;
+    OPENGL_COMPAT_PROFILE* = 000050002H;
 
     (* glfwEnable/glfwDisable tokens *)
-    GLFW_MOUSE_CURSOR*         = 000030001H;
-    GLFW_STICKY_KEYS*          = 000030002H;
-    GLFW_STICKY_MOUSE_BUTTONS* = 000030003H;
-    GLFW_SYSTEM_KEYS*          = 000030004H;
-    GLFW_KEY_REPEAT*           = 000030005H;
-    GLFW_AUTO_POLL_EVENTS*     = 000030006H;
+    MOUSE_CURSOR*         = 000030001H;
+    STICKY_KEYS*          = 000030002H;
+    STICKY_MOUSE_BUTTONS* = 000030003H;
+    SYSTEM_KEYS*          = 000030004H;
+    KEY_REPEAT*           = 000030005H;
+    AUTO_POLL_EVENTS*     = 000030006H;
 
     (* glfwWaitThread wait modes *)
-    GLFW_WAIT*                 = 000040001H;
-    GLFW_NOWAIT*               = 000040002H;
+    WAIT*                 = 000040001H;
+    NOWAIT*               = 000040002H;
 
     (* glfwGetJoystickParam tokens *)
-    GLFW_PRESENT*              = 000050001H;
-    GLFW_AXES*                 = 000050002H;
-    GLFW_BUTTONS*              = 000050003H;
+    PRESENT*              = 000050001H;
+    AXES*                 = 000050002H;
+    BUTTONS*              = 000050003H;
 
     (* glfwReadImage/glfwLoadTexture2D flags *)
-    GLFW_NO_RESCALE_BIT*       = 000000001H; (* Only for glfwReadImage *)
-    GLFW_ORIGIN_UL_BIT*        = 000000002H;
-    GLFW_BUILD_MIPMAPS_BIT*    = 000000004H; (* Only for glfwLoadTexture2D *)
-    GLFW_ALPHA_MAP_BIT*        = 000000008H;
+    NO_RESCALE_BIT*       = 000000001H; (* Only for glfwReadImage *)
+    ORIGIN_UL_BIT*        = 000000002H;
+    BUILD_MIPMAPS_BIT*    = 000000004H; (* Only for glfwLoadTexture2D *)
+    ALPHA_MAP_BIT*        = 000000008H;
 
     (* Time spans longer than this (seconds) are considered to be infinity *)
-    GLFW_INFINITY*             = 100000.0;
+    INFINITY*             = 100000.0;
 
 TYPE
-    GLFWpointer* = POINTER TO RECORD [untagged] END;
-    GLFWstring*  = POINTER TO ARRAY [untagged] OF SHORTCHAR;
+    Pointer* = POINTER TO RECORD [untagged] END;
+    String*  = POINTER TO ARRAY [untagged] OF SHORTCHAR;
 
-    (* The video mode structure used by glfwGetVideoModes() *)
-    GLFWvidmode = RECORD
+    (* The video mode structure used by GetVideoModes() *)
+    Vidmode = RECORD
       Width*, Height*                : INTEGER;
       RedBits*, BlueBits*, GreenBits*: INTEGER;
     END;
 
     (* Image/texture information *)
-    GLFWimage* = RECORD
+    Image* = RECORD
       Width*, Height*: INTEGER;
       Format*        : INTEGER;
       BytesPerPixel* : INTEGER;
-      Data*          : GLFWstring;
+      Data*          : String;
     END;
 
     (* Thread ID *)
-    GLFWthread* = INTEGER;
+    Thread* = INTEGER;
 
     (* Mutex object *)
-    GLFWmutex* = GLFWpointer;
+    Mutex* = Pointer;
 
     (* Condition variable object *)
-    GLFWcond* = GLFWpointer;
+    Cond* = Pointer;
 
     (* Function pointer types *)
-    GLFWwindowsizefun*    = PROCEDURE(Width, Height: INTEGER);
-    GLFWwindowclosefun*   = PROCEDURE (): INTEGER;
-    GLFWwindowrefreshfun* = PROCEDURE;
-    GLFWmousebuttonfun*   = PROCEDURE(Button, Action: INTEGER);
-    GLFWmouseposfun*      = PROCEDURE(X, Y: INTEGER);
-    GLFWmousewheelfun*    = PROCEDURE(Pos: INTEGER);
-    GLFWkeyfun*           = PROCEDURE(Key, Action: INTEGER);
-    GLFWcharfun*          = PROCEDURE(Character, Action: INTEGER);
-    GLFWthreadfun*        = PROCEDURE(Arg: GLFWpointer);
+    Windowsizefun*    = PROCEDURE (Width, Height: INTEGER);
+    Windowclosefun*   = PROCEDURE (): INTEGER;
+    Windowrefreshfun* = PROCEDURE ();
+    Mousebuttonfun*   = PROCEDURE (Button, Action: INTEGER);
+    Mouseposfun*      = PROCEDURE (X, Y: INTEGER);
+    Mousewheelfun*    = PROCEDURE (Pos: INTEGER);
+    Keyfun*           = PROCEDURE (Key, Action: INTEGER);
+    Charfun*          = PROCEDURE (Character, Action: INTEGER);
+    Threadfun*        = PROCEDURE (Arg: Pointer);
   
 (* GLFW initialization, termination and version querying *)
-PROCEDURE glfwInit*                     ["glfwInit"                    ] (): INTEGER;
-PROCEDURE glfwTerminate*                ["glfwTerminate"               ] ();
-PROCEDURE glfwGetVersion*               ["glfwGetVersion"              ] (VAR major, minor, rev: INTEGER);
+PROCEDURE Init*                     ["glfwInit"                    ] (): INTEGER;
+PROCEDURE Terminate*                ["glfwTerminate"               ] ();
+PROCEDURE GetVersion*               ["glfwGetVersion"              ] (VAR major, minor, rev: INTEGER);
 (* Window handling *)
-PROCEDURE glfwOpenWindow*               ["glfwOpenWindow"              ] (width, height, redbits, greenbits, bluebits, alphabits, depthbits, stencilbits, mode: INTEGER): INTEGER;
-PROCEDURE glfwOpenWindowHint*           ["glfwOpenWindowHint"          ] (target, hint: INTEGER);
-PROCEDURE glfwCloseWindow*              ["glfwCloseWindow"             ] ();
-PROCEDURE glfwSetWindowTitle*           ["glfwSetWindowTitle"          ] (title: GLFWstring);
-PROCEDURE glfwGetWindowSize*            ["glfwGetWindowSize"           ] (VAR width, height: INTEGER);
-PROCEDURE glfwSetWindowSize*            ["glfwSetWindowSize"           ] (width, height: INTEGER);
-PROCEDURE glfwSetWindowPos*             ["glfwSetWindowPos"            ] (x, y: INTEGER);
-PROCEDURE glfwIconifyWindow*            ["glfwIconifyWindow"           ] ();
-PROCEDURE glfwRestoreWindow*            ["glfwRestoreWindow"           ] ();
-PROCEDURE glfwSwapBuffers*              ["glfwSwapBuffers"             ] ();
-PROCEDURE glfwSwapInterval*             ["glfwSwapInterval"            ] (interval: INTEGER);
-PROCEDURE glfwGetWindowParam*           ["glfwGetWindowParam"          ] (param: INTEGER): INTEGER;
-PROCEDURE glfwSetWindowSizeCallback*    ["glfwSetWindowSizeCallback"   ] (cbfun: GLFWwindowsizefun);
-PROCEDURE glfwSetWindowCloseCallback*   ["glfwSetWindowCloseCallback"  ] (cbfun: GLFWwindowclosefun);
-PROCEDURE glfwSetWindowRefreshCallback* ["glfwSetWindowRefreshCallback"] (cbfun: GLFWwindowrefreshfun);
+PROCEDURE OpenWindow*               ["glfwOpenWindow"              ] (width, height, redbits, greenbits, bluebits, alphabits, depthbits, stencilbits, mode: INTEGER): INTEGER;
+PROCEDURE OpenWindowHint*           ["glfwOpenWindowHint"          ] (target, hint: INTEGER);
+PROCEDURE CloseWindow*              ["glfwCloseWindow"             ] ();
+PROCEDURE SetWindowTitle*           ["glfwSetWindowTitle"          ] (title: String);
+PROCEDURE GetWindowSize*            ["glfwGetWindowSize"           ] (VAR width, height: INTEGER);
+PROCEDURE SetWindowSize*            ["glfwSetWindowSize"           ] (width, height: INTEGER);
+PROCEDURE SetWindowPos*             ["glfwSetWindowPos"            ] (x, y: INTEGER);
+PROCEDURE IconifyWindow*            ["glfwIconifyWindow"           ] ();
+PROCEDURE RestoreWindow*            ["glfwRestoreWindow"           ] ();
+PROCEDURE SwapBuffers*              ["glfwSwapBuffers"             ] ();
+PROCEDURE SwapInterval*             ["glfwSwapInterval"            ] (interval: INTEGER);
+PROCEDURE GetWindowParam*           ["glfwGetWindowParam"          ] (param: INTEGER): INTEGER;
+PROCEDURE SetWindowSizeCallback*    ["glfwSetWindowSizeCallback"   ] (cbfun: Windowsizefun);
+PROCEDURE SetWindowCloseCallback*   ["glfwSetWindowCloseCallback"  ] (cbfun: Windowclosefun);
+PROCEDURE SetWindowRefreshCallback* ["glfwSetWindowRefreshCallback"] (cbfun: Windowrefreshfun);
 (* Video mode functions *)
-PROCEDURE glfwGetVideoModes*            ["glfwGetVideoModes"           ] (list: GLFWvidmode; maxcount: INTEGER): INTEGER;
-PROCEDURE glfwGetDesktopMode*           ["glfwGetDesktopMode"          ] (mode: GLFWvidmode);
+PROCEDURE GetVideoModes*            ["glfwGetVideoModes"           ] (list: Vidmode; maxcount: INTEGER): INTEGER;
+PROCEDURE GetDesktopMode*           ["glfwGetDesktopMode"          ] (mode: Vidmode);
 (* Input handling *)
-PROCEDURE glfwPollEvents*               ["glfwPollEvents"              ] ();
-PROCEDURE glfwWaitEvents*               ["glfwWaitEvents"              ] ();
-PROCEDURE glfwGetKey*                   ["glfwGetKey"                  ] (key: INTEGER): INTEGER;
-PROCEDURE glfwGetMouseButton*           ["glfwGetMouseButton"          ] (button: INTEGER): INTEGER;
-PROCEDURE glfwGetMousePos*              ["glfwGetMousePos"             ] (VAR xpos, ypos: INTEGER);
-PROCEDURE glfwSetMousePos*              ["glfwSetMousePos"             ] (xpos, ypos: INTEGER);
-PROCEDURE glfwGetMouseWheel*            ["glfwGetMouseWheel"           ] (): INTEGER;
-PROCEDURE glfwSetMouseWheel*            ["glfwSetMouseWheel"           ] (pos: INTEGER);
-PROCEDURE glfwSetKeyCallback*           ["glfwSetKeyCallback"          ] (cbfun: GLFWkeyfun);
-PROCEDURE glfwSetCharCallback*          ["glfwSetCharCallback"         ] (cbfun: GLFWcharfun);
-PROCEDURE glfwSetMouseButtonCallback*   ["glfwSetMouseButtonCallback"  ] (cbfun: GLFWmousebuttonfun);
-PROCEDURE glfwSetMousePosCallback*      ["glfwSetMousePosCallback"     ] (cbfun: GLFWmouseposfun);
-PROCEDURE glfwSetMouseWheelCallback*    ["glfwSetMouseWheelCallback"   ] (cbfun: GLFWmousewheelfun);
+PROCEDURE PollEvents*               ["glfwPollEvents"              ] ();
+PROCEDURE WaitEvents*               ["glfwWaitEvents"              ] ();
+PROCEDURE GetKey*                   ["glfwGetKey"                  ] (key: INTEGER): INTEGER;
+PROCEDURE GetMouseButton*           ["glfwGetMouseButton"          ] (button: INTEGER): INTEGER;
+PROCEDURE GetMousePos*              ["glfwGetMousePos"             ] (VAR xpos, ypos: INTEGER);
+PROCEDURE SetMousePos*              ["glfwSetMousePos"             ] (xpos, ypos: INTEGER);
+PROCEDURE GetMouseWheel*            ["glfwGetMouseWheel"           ] (): INTEGER;
+PROCEDURE SetMouseWheel*            ["glfwSetMouseWheel"           ] (pos: INTEGER);
+PROCEDURE SetKeyCallback*           ["glfwSetKeyCallback"          ] (cbfun: Keyfun);
+PROCEDURE SetCharCallback*          ["glfwSetCharCallback"         ] (cbfun: Charfun);
+PROCEDURE SetMouseButtonCallback*   ["glfwSetMouseButtonCallback"  ] (cbfun: Mousebuttonfun);
+PROCEDURE SetMousePosCallback*      ["glfwSetMousePosCallback"     ] (cbfun: Mouseposfun);
+PROCEDURE SetMouseWheelCallback*    ["glfwSetMouseWheelCallback"   ] (cbfun: Mousewheelfun);
 (* Joystick input *)
-PROCEDURE glfwGetJoystickParam*         ["glfwGetJoystickParam"        ] (joy, param: INTEGER): INTEGER;
-PROCEDURE glfwGetJoystickPos*           ["glfwGetJoystickPos"          ] (joy: INTEGER; VAR pos: SHORTREAL; numaxes: INTEGER): INTEGER;
-PROCEDURE glfwGetJoystickButtons*       ["glfwGetJoystickButtons"      ] (joy: INTEGER; buttons: GLFWstring; numbuttons: INTEGER): INTEGER;
+PROCEDURE GetJoystickParam*         ["glfwGetJoystickParam"        ] (joy, param: INTEGER): INTEGER;
+PROCEDURE GetJoystickPos*           ["glfwGetJoystickPos"          ] (joy: INTEGER; VAR pos: SHORTREAL; numaxes: INTEGER): INTEGER;
+PROCEDURE GetJoystickButtons*       ["glfwGetJoystickButtons"      ] (joy: INTEGER; buttons: String; numbuttons: INTEGER): INTEGER;
 (* Time *)
-PROCEDURE glfwGetTime*                  ["glfwGetTime"                 ] (): REAL;
-PROCEDURE glfwSetTime*                  ["glfwSetTime"                 ] (time: REAL);
-PROCEDURE glfwSleep*                    ["glfwSleep"                   ] (time: REAL);
+PROCEDURE GetTime*                  ["glfwGetTime"                 ] (): REAL;
+PROCEDURE SetTime*                  ["glfwSetTime"                 ] (time: REAL);
+PROCEDURE Sleep*                    ["glfwSleep"                   ] (time: REAL);
 (* Extension support *)
-PROCEDURE glfwExtensionSupported*       ["glfwExtensionSupported"      ] (extension: GLFWstring): INTEGER;
-PROCEDURE glfwGetProcAddress*           ["glfwGetProcAddress"          ] (procname: GLFWstring): GLFWpointer;
-PROCEDURE glfwGetGLVersion*             ["glfwGetGLVersion"            ] (VAR major, minor, rev: INTEGER);
+PROCEDURE ExtensionSupported*       ["glfwExtensionSupported"      ] (extension: String): INTEGER;
+PROCEDURE GetProcAddress*           ["glfwGetProcAddress"          ] (procname: String): Pointer;
+PROCEDURE GetGLVersion*             ["glfwGetGLVersion"            ] (VAR major, minor, rev: INTEGER);
 (* Threading support *)
-PROCEDURE glfwCreateThread*             ["glfwCreateThread"            ] (fun: GLFWthreadfun; arg: GLFWpointer): GLFWthread;
-PROCEDURE glfwDestroyThread*            ["glfwDestroyThread"           ] (ID: GLFWthread);
-PROCEDURE glfwWaitThread*               ["glfwWaitThread"              ] (ID: GLFWthread; waitmode: INTEGER): INTEGER;
-PROCEDURE glfwGetThreadID*              ["glfwGetThreadID"             ] (): GLFWthread;
-PROCEDURE glfwCreateMutex*              ["glfwCreateMutex"             ] (): GLFWmutex;
-PROCEDURE glfwDestroyMutex*             ["glfwDestroyMutex"            ] (mutex: GLFWmutex);
-PROCEDURE glfwLockMutex*                ["glfwLockMutex"               ] (mutex: GLFWmutex);
-PROCEDURE glfwUnlockMutex*              ["glfwUnlockMutex"             ] (mutex: GLFWmutex);
-PROCEDURE glfwCreateCond*               ["glfwCreateCond"              ] (): GLFWcond;
-PROCEDURE glfwDestroyCond*              ["glfwDestroyCond"             ] (cond: GLFWcond);
-PROCEDURE glfwWaitCond*                 ["glfwWaitCond"                ] (cond: GLFWcond; mutex: GLFWmutex; timeout: REAL);
-PROCEDURE glfwSignalCond*               ["glfwSignalCond"              ] (cond: GLFWcond);
-PROCEDURE glfwBroadcastCond*            ["glfwBroadcastCond"           ] (cond: GLFWcond);
-PROCEDURE glfwGetNumberOfProcessors*    ["glfwGetNumberOfProcessors"   ] (): INTEGER;
+PROCEDURE CreateThread*             ["glfwCreateThread"            ] (fun: Threadfun; arg: Pointer): Thread;
+PROCEDURE DestroyThread*            ["glfwDestroyThread"           ] (ID: Thread);
+PROCEDURE WaitThread*               ["glfwWaitThread"              ] (ID: Thread; waitmode: INTEGER): INTEGER;
+PROCEDURE GetThreadID*              ["glfwGetThreadID"             ] (): Thread;
+PROCEDURE CreateMutex*              ["glfwCreateMutex"             ] (): Mutex;
+PROCEDURE DestroyMutex*             ["glfwDestroyMutex"            ] (mutex: Mutex);
+PROCEDURE LockMutex*                ["glfwLockMutex"               ] (mutex: Mutex);
+PROCEDURE UnlockMutex*              ["glfwUnlockMutex"             ] (mutex: Mutex);
+PROCEDURE CreateCond*               ["glfwCreateCond"              ] (): Cond;
+PROCEDURE DestroyCond*              ["glfwDestroyCond"             ] (cond: Cond);
+PROCEDURE WaitCond*                 ["glfwWaitCond"                ] (cond: Cond; mutex: Mutex; timeout: REAL);
+PROCEDURE SignalCond*               ["glfwSignalCond"              ] (cond: Cond);
+PROCEDURE BroadcastCond*            ["glfwBroadcastCond"           ] (cond: Cond);
+PROCEDURE GetNumberOfProcessors*    ["glfwGetNumberOfProcessors"   ] (): INTEGER;
 (* Enable/disable functions *)
-PROCEDURE glfwEnable*                   ["glfwEnable"                  ] (token: INTEGER);
-PROCEDURE glfwDisable*                  ["glfwDisable"                 ] (token: INTEGER);
+PROCEDURE Enable*                   ["glfwEnable"                  ] (token: INTEGER);
+PROCEDURE Disable*                  ["glfwDisable"                 ] (token: INTEGER);
 (* Image/texture I/O support *)
-PROCEDURE glfwReadImage*                ["glfwReadImage"               ] (name: GLFWstring; img: GLFWimage; flags: INTEGER): INTEGER;
-PROCEDURE glfwReadMemoryImage*          ["glfwReadMemoryImage"         ] (data: GLFWpointer; size: INTEGER; img: GLFWimage; flags: INTEGER): INTEGER;
-PROCEDURE glfwFreeImage*                ["glfwFreeImage"               ] (img: GLFWimage);
-PROCEDURE glfwLoadTexture2D*            ["glfwLoadTexture2D"           ] (name: GLFWstring; flags: INTEGER): INTEGER;
-PROCEDURE glfwLoadMemoryTexture2D*      ["glfwLoadMemoryTexture2D"     ] (data: GLFWpointer; size: INTEGER; flags: INTEGER): INTEGER;
-PROCEDURE glfwLoadTextureImage2D*       ["glfwLoadTextureImage2D"      ] (img: GLFWimage; flags: INTEGER): INTEGER;
+PROCEDURE ReadImage*                ["glfwReadImage"               ] (name: String; img: Image; flags: INTEGER): INTEGER;
+PROCEDURE ReadMemoryImage*          ["glfwReadMemoryImage"         ] (data: Pointer; size: INTEGER; img: Image; flags: INTEGER): INTEGER;
+PROCEDURE FreeImage*                ["glfwFreeImage"               ] (img: Image);
+PROCEDURE LoadTexture2D*            ["glfwLoadTexture2D"           ] (name: String; flags: INTEGER): INTEGER;
+PROCEDURE LoadMemoryTexture2D*      ["glfwLoadMemoryTexture2D"     ] (data: Pointer; size: INTEGER; flags: INTEGER): INTEGER;
+PROCEDURE LoadTextureImage2D*       ["glfwLoadTextureImage2D"      ] (img: Image; flags: INTEGER): INTEGER;
   
 END GlfwLib.
